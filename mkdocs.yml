@@ -1,0 +1,32 @@
+site_name: VLRChat
+nav:
+- About: index.md
+- Table of Contents: Table of Contents.md
+- Chapters:
+  - Anesthesia and Pain Management: Anesthesia and Pain Management.md
+  - Cardiology: Cardiology.md
+  - Critical Care: Critical Care.md
+  - Dermatology: Dermatology.md
+  - Endocrinology: Endocrinology.md
+  - Gastroenterology: Gastroenterology.md
+  - Geriatrics: Geriatrics.md
+  - Hematology and Oncology: Hematology and Oncology.md
+  - Hepatology: Hepatology.md
+  - Hospital Medicine: Hospital Medicine.md
+  - Infectious Disease: Infectious Disease.md
+  - Nephrology: Nephrology.md
+  - Neurology: Neurology.md
+  - Ophthalmology: Ophthalmology.md
+  - Outpatient Medicine: Outpatient Medicine.md
+  - Palliative Care: Palliative Care.md
+  - Physical Medicine and Rehabilitation: Physical Medicine and Rehabilitation.md
+  - Procedures: Procedures.md
+  - Psychiatry: Psychiatry.md
+  - Pulmonology: Pulmonology.md
+  - Radiology: Radiology.md
+  - Rheumatology: Rheumatology.md
+  - Toxicology: Toxicology.md
+- Appendices: Appendices.md
+
+theme: readthedocs
+
