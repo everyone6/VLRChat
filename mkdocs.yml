@@ -28,5 +28,6 @@ nav:
   - Toxicology: Toxicology.md
 - Appendices: Appendices.md
 
-theme: readthedocs
-
+theme:
+  name: readthedocs
+  custom_dir: overrides

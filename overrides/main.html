@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block scripts %}
+{{ super() }}
+<script type="module">
+import Chatbot from 'https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js';
+Chatbot.init({
+    chatflowid: "a542b9c1-03cf-409a-bcdc-295aa6c7eb09",
+    apiHost: "https://api.xlr.chat",
+});
+</script>
+{% endblock %}
