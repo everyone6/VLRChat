@@ -1,16 +1,18 @@
-# Welcome to The 7th Edition of the Vanderbilt Housestaff Handbook.
+# Welcome to xlr.chat
 
 ## Contents:
 
-This website contains the markdown conversion of 7th Edition of the Vanderbilt Housestaff Handbook. It is maintained by Matthew Sweeney, MD and Chase Webber, MD through the VLRChat Project. It is divided to separate files by chapter. The Housestaff handbook represents a compendium of clinical and institutional information to assist with their function as resident physicians at Vanderbilt University Medical Center. This website does not represent the official VUMC online version of the housestaff handbook, that is located at https://vimbook.vumc.org.
+This website contains the markdown conversion of 7th Edition of the Vanderbilt Housestaff Handbook. The Housestaff handbook represents a compendium of clinical and institutional information to assist with their function as resident physicians at Vanderbilt University Medical Center. The handbook contents are used to train the chatbot which can be accessed in the lower right corner of this webpage. 
 
 ## Purpose:
 
-This website serves as a test-bed for VLRChat, the custom chatbot trained off of the handbook materials. 
+This website exists to serve as a test bed for VLRChat, the custom chatbot trained off of the handbook materials. 
 
 ## Notes:
 
-The conversion from source files to the .md files displayed on this website is imperfect and occasionally arduous. Care has been taken to ensure the most accurate translation possible but there may still be errors both in content and formatting. If in doubt, double-check findings with the physical handbook. Please report any errors in factual content to both matthew.sweeney@vumc.org and chase.j.webber@vumc.org. Future versions of this website will contain images from the handbook.
+This website is maintained by Matthew Sweeney, MD and Chase Webber, MD through the VLRChat Project. The VLRChat Project is funded by the [Innovation Catalyst Fund](https://cttc.co/inventors/innovation-catalyst-fund). The conversion from source files to the .md files displayed on this website is imperfect. Care has been taken to ensure the most accurate translation possible but there may still be errors both in content and formatting. If in doubt, double-check findings with the physical handbook. Images are generally not included in this version, although it is planned to make them available on this website and to this chatbot in the future. Please report any errors in factual content to both matthew.sweeney@vumc.org and chase.j.webber@vumc.org. 
+
+Please note that this website does not represent the official VUMC online version of the housestaff handbook, that is located [here](https://vimbook.vumc.org).
 
 ## And finally: WARNING
 
