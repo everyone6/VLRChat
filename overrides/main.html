@@ -1,12 +1,63 @@
 {% extends "base.html" %}
 
-{% block scripts %}
+{% block content %}
 {{ super() }}
+
 <script type="module">
-import Chatbot from 'https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js';
-Chatbot.init({
-    chatflowid: "a542b9c1-03cf-409a-bcdc-295aa6c7eb09",
-    apiHost: "https://api.xlr.chat",
-});
+    import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+    Chatbot.init({
+        chatflowid: "a542b9c1-03cf-409a-bcdc-295aa6c7eb09",
+        apiHost: "https://api.vlr.chat",
+        theme: {
+            button: {
+                backgroundColor: '#3B81F6',
+                right: 20,
+                bottom: 20,
+                size: 48,
+                dragAndDrop: true,
+                iconColor: 'white',
+            },
+            chatWindow: {
+                showTitle: true,
+                title: 'VLRChat Bot',
+                welcomeMessage: 'Hello! Ask me anything about the Vanderbilt Handbook.',
+                errorMessage: 'Sorry, something went wrong. Please try again.',
+                backgroundColor: '#ffffff',
+                height: 700,
+                width: 400,
+                fontSize: 16,
+                clearChatOnReload: false,
+                sourceDocsTitle: 'Sources:',
+                renderHTML: true,
+                showFollowUpPrompts: true,
+                botMessage: {
+                    backgroundColor: '#f7f8ff',
+                    textColor: '#303235',
+                    showAvatar: true,
+                },
+                userMessage: {
+                    backgroundColor: '#3B81F6',
+                    textColor: '#ffffff',
+                    showAvatar: true,
+                },
+                textInput: {
+                    placeholder: 'Type your question',
+                    backgroundColor: '#ffffff',
+                    textColor: '#303235',
+                    sendButtonColor: '#3B81F6',
+                    autoFocus: true,
+                },
+                feedback: {
+                    color: '#303235',
+                },
+                footer: {
+                    textColor: '#303235',
+                    text: 'Powered by',
+                    company: 'Flowise',
+                    companyLink: 'https://flowiseai.com'
+                }
+            }
+        }
+    })
 </script>
 {% endblock %}
