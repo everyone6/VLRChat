@@ -1,8 +1,6 @@
 {% extends "base.html" %}
-
 {% block content %}
 {{ super() }}
-
 <script type="module">
     import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
     Chatbot.init({
@@ -57,7 +55,8 @@
                     companyLink: 'https://flowiseai.com'
                 }
             }
-        }
+        },
+        customCSS: `a.MuiChip-root { display: none !important; }`,
     })
 </script>
 {% endblock %}
