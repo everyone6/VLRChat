@@ -1,0 +1,25 @@
+/* Ensure chatbot loads on all pages including search results */
+body {
+    position: relative;
+}
+
+/* Style for XLR link in header */
+.wy-side-nav-search a[href="https://xlr.chat"] {
+    color: white !important;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.wy-side-nav-search a[href="https://xlr.chat"]:hover {
+    text-decoration: underline;
+}
+
+/* Ensure chatbot iframe is visible on all pages */
+iframe[title*="flowise"] {
+    z-index: 9999 !important;
+}
+
+/* Make sure chatbot button appears on search pages */
+.search-results {
+    position: relative;
+}

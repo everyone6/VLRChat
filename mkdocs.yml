@@ -27,7 +27,8 @@ nav:
   - Rheumatology: Rheumatology.md
   - Toxicology: Toxicology.md
 - Appendices: Appendices.md
-
 theme:
   name: readthedocs
   custom_dir: overrides
+extra_css:
+  - stylesheets/extra.css
