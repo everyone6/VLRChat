@@ -29,6 +29,16 @@
     background-color: rgba(0, 0, 0, 0.1) !important;
 }
 
+/* Mobile top bar - change from blue to dark gold */
+.wy-nav-top {
+    background-color: var(--vanderbilt-dark-gold) !important;
+}
+
+/* Mobile menu icon color */
+.wy-nav-top i {
+    color: #ffffff !important;
+}
+
 /* Sidebar menu background */
 .wy-menu-vertical {
     background-color: #2C2C2C !important;

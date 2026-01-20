@@ -2,14 +2,14 @@
 {% block content %}
 {{ super() }}
 
-<!-- Add XLR link and modify header styling -->
+<!-- Add XLR link with pipe separator -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     // Find the site title link
     var siteTitleLink = document.querySelector('.wy-side-nav-search > a');
     if (siteTitleLink) {
-        // Store original HTML
-        var originalHTML = siteTitleLink.innerHTML;
+        // Store original content
+        var homeIcon = siteTitleLink.querySelector('i.fa-home');
         
         // Clear and rebuild with proper styling
         siteTitleLink.innerHTML = '';
@@ -17,19 +17,31 @@ document.addEventListener('DOMContentLoaded', function() {
         siteTitleLink.style.alignItems = 'center';
         siteTitleLink.style.color = '#ffffff';
         
+        // Add home icon
+        if (homeIcon) {
+            homeIcon.style.cssText = 'color: #ffffff; margin-right: 10px;';
+            siteTitleLink.appendChild(homeIcon);
+        } else {
+            // Fallback if icon not found
+            var iconSpan = document.createElement('i');
+            iconSpan.className = 'fa fa-home';
+            iconSpan.style.cssText = 'color: #ffffff; margin-right: 10px;';
+            siteTitleLink.appendChild(iconSpan);
+        }
+        
         // Create XLR link
         var xlrLink = document.createElement('a');
         xlrLink.href = 'https://xlr.chat';
         xlrLink.textContent = 'XLR';
-        xlrLink.style.cssText = 'color: #CFAE70; text-decoration: none; font-weight: bold; font-size: 1.2em; margin-right: 12px;';
+        xlrLink.style.cssText = 'color: #CFAE70; text-decoration: none; font-weight: bold; font-size: 1em; margin-right: 10px;';
         xlrLink.onclick = function(e) {
             e.stopPropagation();
         };
         
-        // Create book icon
-        var bookIcon = document.createElement('span');
-        bookIcon.innerHTML = '📚';
-        bookIcon.style.cssText = 'font-size: 1.5em; margin-right: 8px;';
+        // Create pipe separator
+        var separator = document.createElement('span');
+        separator.textContent = '|';
+        separator.style.cssText = 'color: #ffffff; margin-right: 10px; font-weight: normal;';
         
         // Create VLRChat text
         var siteNameSpan = document.createElement('span');
@@ -38,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Assemble
         siteTitleLink.appendChild(xlrLink);
-        siteTitleLink.appendChild(bookIcon);
+        siteTitleLink.appendChild(separator);
         siteTitleLink.appendChild(siteNameSpan);
     }
 });
