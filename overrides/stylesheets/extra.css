@@ -20,21 +20,55 @@
     background-color: var(--vanderbilt-dark-gold) !important;
 }
 
+/* Make sure site name is always visible */
+.wy-side-nav-search > a {
+    color: #ffffff !important;
+}
+
+.wy-side-nav-search > a:hover {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Sidebar menu background */
 .wy-menu-vertical {
     background-color: #2C2C2C !important;
 }
 
+/* All sidebar links - white text */
 .wy-menu-vertical a {
     color: #ffffff !important;
 }
 
 .wy-menu-vertical a:hover {
     background-color: var(--vanderbilt-dark-gold) !important;
+    color: #ffffff !important;
 }
 
+/* Current/active page - darker background with white text */
 .wy-menu-vertical li.current > a {
     background-color: var(--vanderbilt-dark-gold) !important;
+    color: #ffffff !important;
     border: none !important;
+}
+
+/* Expanded menu items (like when "About" is open) - darker background */
+.wy-menu-vertical li.current ul {
+    background-color: #1a1a1a !important;
+}
+
+/* Sub-items in expanded menus */
+.wy-menu-vertical li.current ul li a {
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
+}
+
+.wy-menu-vertical li.current ul li a:hover {
+    background-color: var(--vanderbilt-dark-gold) !important;
+}
+
+/* Section headers like "CHAPTERS" - change from blue to gold */
+.wy-menu-vertical p.caption {
+    color: var(--vanderbilt-gold) !important;
 }
 
 /* Style for XLR link in header */
@@ -66,6 +100,7 @@ a:hover {
 /* Search box styling */
 .wy-side-nav-search input[type=text] {
     border-color: var(--vanderbilt-gold) !important;
+    background-color: rgba(255, 255, 255, 0.9) !important;
 }
 
 /* Ensure chatbot loads on all pages including search results */
@@ -97,4 +132,15 @@ table {
 /* Breadcrumbs */
 .wy-breadcrumbs a {
     color: var(--vanderbilt-dark-gold) !important;
+}
+
+/* Fix for toctree captions (section headers) */
+.wy-menu-vertical .toctree-l1.current > a {
+    background-color: var(--vanderbilt-dark-gold) !important;
+}
+
+/* Nested menu items */
+.wy-menu-vertical .toctree-l2 > a,
+.wy-menu-vertical .toctree-l3 > a {
+    color: #ffffff !important;
 }

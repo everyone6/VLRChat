@@ -2,36 +2,44 @@
 {% block content %}
 {{ super() }}
 
-<!-- Add XLR link and replace home icon with book -->
+<!-- Add XLR link and modify header styling -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Find the site title element
-    var siteName = document.querySelector('.wy-side-nav-search a.icon');
-    if (siteName) {
+    // Find the site title link
+    var siteTitleLink = document.querySelector('.wy-side-nav-search > a');
+    if (siteTitleLink) {
+        // Store original HTML
+        var originalHTML = siteTitleLink.innerHTML;
+        
+        // Clear and rebuild with proper styling
+        siteTitleLink.innerHTML = '';
+        siteTitleLink.style.display = 'flex';
+        siteTitleLink.style.alignItems = 'center';
+        siteTitleLink.style.color = '#ffffff';
+        
         // Create XLR link
         var xlrLink = document.createElement('a');
         xlrLink.href = 'https://xlr.chat';
         xlrLink.textContent = 'XLR';
-        xlrLink.style.cssText = 'color: #CFAE70; text-decoration: none; font-weight: bold; margin-right: 12px; font-size: 1.2em;';
+        xlrLink.style.cssText = 'color: #CFAE70; text-decoration: none; font-weight: bold; font-size: 1.2em; margin-right: 12px;';
+        xlrLink.onclick = function(e) {
+            e.stopPropagation();
+        };
         
-        // Insert before the home icon
-        siteName.parentNode.insertBefore(xlrLink, siteName);
+        // Create book icon
+        var bookIcon = document.createElement('span');
+        bookIcon.innerHTML = '📚';
+        bookIcon.style.cssText = 'font-size: 1.5em; margin-right: 8px;';
         
-        // Replace home icon with book icon
-        var homeIcon = siteName.querySelector('i');
-        if (homeIcon) {
-            homeIcon.className = 'fa fa-book';
-            homeIcon.style.color = '#CFAE70';
-        }
+        // Create VLRChat text
+        var siteNameSpan = document.createElement('span');
+        siteNameSpan.textContent = 'VLRChat';
+        siteNameSpan.style.cssText = 'color: #ffffff; font-weight: bold;';
         
-        // Style the site name
-        var siteNameText = siteName.childNodes[siteName.childNodes.length - 1];
-        if (siteNameText && siteNameText.nodeType === 3) {
-            var span = document.createElement('span');
-            span.textContent = siteNameText.textContent;
-            span.style.marginLeft = '8px';
-            siteNameText.replaceWith(span);
-        }
+        // Assemble
+        siteTitleLink.appendChild(xlrLink);
+        siteTitleLink.appendChild(bookIcon);
+        siteTitleLink.appendChild(siteNameSpan);
     }
 });
 </script>
