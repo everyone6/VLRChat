@@ -2,7 +2,7 @@
 {% block content %}
 {{ super() }}
 
-<!-- Add XLR link before site name -->
+<!-- Add XLR link and replace home icon with book -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     // Find the site title element
@@ -12,16 +12,26 @@ document.addEventListener('DOMContentLoaded', function() {
         var xlrLink = document.createElement('a');
         xlrLink.href = 'https://xlr.chat';
         xlrLink.textContent = 'XLR';
-        xlrLink.style.cssText = 'color: white; text-decoration: none; font-weight: bold; margin-right: 8px; font-size: 1.2em;';
+        xlrLink.style.cssText = 'color: #CFAE70; text-decoration: none; font-weight: bold; margin-right: 12px; font-size: 1.2em;';
         
         // Insert before the home icon
         siteName.parentNode.insertBefore(xlrLink, siteName);
         
-        // Add a separator
-        var separator = document.createElement('span');
-        separator.textContent = ' / ';
-        separator.style.cssText = 'color: white; margin: 0 4px;';
-        siteName.parentNode.insertBefore(separator, siteName);
+        // Replace home icon with book icon
+        var homeIcon = siteName.querySelector('i');
+        if (homeIcon) {
+            homeIcon.className = 'fa fa-book';
+            homeIcon.style.color = '#CFAE70';
+        }
+        
+        // Style the site name
+        var siteNameText = siteName.childNodes[siteName.childNodes.length - 1];
+        if (siteNameText && siteNameText.nodeType === 3) {
+            var span = document.createElement('span');
+            span.textContent = siteNameText.textContent;
+            span.style.marginLeft = '8px';
+            siteNameText.replaceWith(span);
+        }
     }
 });
 </script>
@@ -33,7 +43,7 @@ Chatbot.init({
     apiHost: "https://api.vlr.chat",
     theme: {
         button: {
-            backgroundColor: '#333333',
+            backgroundColor: '#866D4B',
             right: 20,
             bottom: 20,
             size: 48,
@@ -43,7 +53,7 @@ Chatbot.init({
         chatWindow: {
             showTitle: true,
             title: 'VLRChat',
-            titleBackgroundColor: '#343131',
+            titleBackgroundColor: '#866D4B',
             welcomeMessage: 'Welcome to VLRChat.',
             errorMessage: 'Sorry, something went wrong. Please try again.',
             backgroundColor: '#ffffff',
@@ -55,27 +65,27 @@ Chatbot.init({
             sourceDocsTitle: 'Sources:',
             renderHTML: true,
             botMessage: {
-                backgroundColor: '#f7f8ff',
-                textColor: '#303235',
+                backgroundColor: '#F5F5F5',
+                textColor: '#000000',
                 showAvatar: false,
             },
             userMessage: {
-                backgroundColor: '#333333',
+                backgroundColor: '#866D4B',
                 textColor: '#ffffff',
                 showAvatar: false,
             },
             textInput: {
                 placeholder: 'Type your question',
                 backgroundColor: '#ffffff',
-                textColor: '#303235',
-                sendButtonColor: '#333333',
+                textColor: '#000000',
+                sendButtonColor: '#866D4B',
                 autoFocus: true,
             },
             feedback: {
-                color: '#303235',
+                color: '#866D4B',
             },
             footer: {
-                textColor: '#303235',
+                textColor: '#866D4B',
                 text: 'Powered by',
                 company: 'Flowise',
                 companyLink: 'https://flowiseai.com'

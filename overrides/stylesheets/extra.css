@@ -1,17 +1,76 @@
-/* Ensure chatbot loads on all pages including search results */
-body {
-    position: relative;
+/* Vanderbilt Color Scheme */
+:root {
+    --vanderbilt-gold: #CFAE70;
+    --vanderbilt-dark-gold: #866D4B;
+    --vanderbilt-black: #000000;
+    --vanderbilt-bg: #F7F3E8;
+}
+
+/* Main background color */
+.wy-nav-content-wrap {
+    background-color: var(--vanderbilt-bg) !important;
+}
+
+.wy-nav-content {
+    background-color: var(--vanderbilt-bg) !important;
+}
+
+/* Sidebar styling */
+.wy-side-nav-search {
+    background-color: var(--vanderbilt-dark-gold) !important;
+}
+
+.wy-menu-vertical {
+    background-color: #2C2C2C !important;
+}
+
+.wy-menu-vertical a {
+    color: #ffffff !important;
+}
+
+.wy-menu-vertical a:hover {
+    background-color: var(--vanderbilt-dark-gold) !important;
+}
+
+.wy-menu-vertical li.current > a {
+    background-color: var(--vanderbilt-dark-gold) !important;
+    border: none !important;
 }
 
 /* Style for XLR link in header */
 .wy-side-nav-search a[href="https://xlr.chat"] {
-    color: white !important;
+    color: var(--vanderbilt-gold) !important;
     font-weight: bold;
     text-decoration: none;
 }
 
 .wy-side-nav-search a[href="https://xlr.chat"]:hover {
     text-decoration: underline;
+    color: #ffffff !important;
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--vanderbilt-black) !important;
+}
+
+/* Links */
+a {
+    color: var(--vanderbilt-dark-gold) !important;
+}
+
+a:hover {
+    color: var(--vanderbilt-gold) !important;
+}
+
+/* Search box styling */
+.wy-side-nav-search input[type=text] {
+    border-color: var(--vanderbilt-gold) !important;
+}
+
+/* Ensure chatbot loads on all pages including search results */
+body {
+    position: relative;
 }
 
 /* Ensure chatbot iframe is visible on all pages */
@@ -22,4 +81,20 @@ iframe[title*="flowise"] {
 /* Make sure chatbot button appears on search pages */
 .search-results {
     position: relative;
+}
+
+/* Table styling for better readability */
+table {
+    background-color: #ffffff !important;
+}
+
+/* Code blocks */
+.rst-content pre {
+    background-color: #2C2C2C !important;
+    border-color: var(--vanderbilt-dark-gold) !important;
+}
+
+/* Breadcrumbs */
+.wy-breadcrumbs a {
+    color: var(--vanderbilt-dark-gold) !important;
 }
