@@ -6,7 +6,7 @@ This website contains the markdown conversion of 7th Edition of the Vanderbilt H
 
 ## Purpose:
 
-This website exists to serve as a test bed for V.xLR.Chat, the custom chatbot trained off of the handbook materials. V.xLR.Chat is the first deployment of the [xLR Project](xlr.chat). The xLR project works to provide more seamless and efficient access to institutional knowledge bases through generative AI integration. These knowledge bases have the dual benefit of trust: being authored by institution members, and location specific information that would not be available via other means. 
+This website exists to serve as a test bed for V.xLR.Chat, the custom chatbot trained off of the handbook materials. V.xLR.Chat is the first deployment of the [xLR Project](https://xlr.chat). The xLR project works to provide more seamless and efficient access to institutional knowledge bases through generative AI integration. These knowledge bases have the dual benefit of trust: being authored by institution members, and location specific information that would not be available via other means. 
 
 ## Notes:
 
