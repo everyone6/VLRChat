@@ -1,4 +1,4 @@
-# Welcome to V.xLR.Chat
+# Welcome to V.XLR.Chat
 
 ## Contents:
 
